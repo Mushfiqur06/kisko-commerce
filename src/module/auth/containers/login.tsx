@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import { loginAction } from "../../../request/Auth";
 
 export default function Login() {
@@ -17,9 +18,11 @@ export default function Login() {
       loginAction(name, password)
         .then(() => {
           history.push("/");
+          toast.success("Login successfully");
         })
         .catch((err: any) => {
           console.log(err);
+          toast.error("Failed Login");
         });
     }
   };
