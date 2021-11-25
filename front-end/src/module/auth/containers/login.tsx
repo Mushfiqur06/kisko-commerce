@@ -41,7 +41,7 @@ export default function Login() {
 
   return (
     <>
-      <div className=''>
+      <div className='text-black'>
         <div>
           <form>
             <div>
