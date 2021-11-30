@@ -41,56 +41,60 @@ export default function Login() {
 
   return (
     <>
-      <div className='text-black'>
-        <div>
-          <form>
-            <div>
-              <div>
-                <h2>
-                  Login to <br /> <b>Kisko E-commerce</b>
-                </h2>
-              </div>
-              <label>
-                <span>Username</span>
-                <div>
-                  <input
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder='Username'
-                  />
-                  {isPhoneNumberRequired ? (
-                    <small>User name required</small>
-                  ) : null}
-                </div>
-              </label>
-              <label>
-                <span>Password</span>
-                <div>
-                  <input
-                    type='password'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder='Password'
-                  />
-                  {isPasswordRequired ? <small>Password required</small> : null}
-                </div>
-              </label>
-              <div>
-                <button
-                  style={{
-                    width: "100%",
-                    boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.1",
-                    backgroundColor: "black",
-                    fontSize: "18px",
-                  }}
-                  onClick={login}
-                >
-                  Log In
-                </button>
-              </div>
+      <div className='flex items-center justify-center w-full h-screen bg-gray-50'>
+        <form>
+          <div className='p-10 rounded-3xl shadow'>
+            <div className='mb-6'>
+              <h2 className='text-4xl'>
+                Login to <br /> <b>Kisko E-commerce</b>
+              </h2>
             </div>
-          </form>
-        </div>
+            <label>
+              <span className='text-gray-400 mb-1'>Username</span>
+              <div>
+                <input
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder='Username'
+                  className='w-full px-2 py-2 rounded mb-2'
+                />
+                {isPhoneNumberRequired ? (
+                  <small>User name required</small>
+                ) : null}
+              </div>
+            </label>
+            <label>
+              <span className='text-gray-400 mb-1'>Password</span>
+              <div>
+                <input
+                  type='password'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder='Password'
+                  className='w-full px-2 py-2 rounded'
+                />
+                {isPasswordRequired ? <small>Password required</small> : null}
+              </div>
+            </label>
+            <div>
+              <button
+                style={{
+                  width: "100%",
+                  boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.1",
+                  backgroundColor: "black",
+                  fontSize: "18px",
+                  color: "white",
+                  padding: "10px 8px",
+                  marginTop: "10px",
+                  borderRadius: "10px",
+                }}
+                onClick={login}
+              >
+                Log In
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </>
   );
