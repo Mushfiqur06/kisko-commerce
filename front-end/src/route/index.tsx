@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Login from "../module/auth/containers/login";
-import Home from "../module/home/containers/Home";
+import Home from "../pages/Home";
 import Profile from "../module/profile/containers/profile";
 import { PrivateRoute } from "./AuthanticatedApp";
 import { AuthRoute } from "./UnauthenticatedApp";
