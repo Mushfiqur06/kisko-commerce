@@ -1,11 +1,5 @@
-import { getTokenFromCookies } from "../utils/authentication";
 import axios from "axios";
-
-const headers = () => ({
-  headers: {
-    Authorization: "Bearer " + getTokenFromCookies(), //the token is a variable which holds the token
-  },
-});
+import { headers } from "../utils/headersTonken";
 
 export async function getAllProductsAction(apiEndPoint: string) {
   try {
